@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://nwydo320td0p"]
+
+[resource]
+transparency = 1
+albedo_color = Color(1, 0.303333, 0.24, 0.776471)
+roughness = 0.36
+rim_enabled = true
+rim_tint = 0.35
