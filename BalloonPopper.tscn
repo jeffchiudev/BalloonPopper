@@ -1,25 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1xx2dd3ohxb0"]
+[gd_scene load_steps=3 format=3 uid="uid://b1xx2dd3ohxb0"]
 
 [ext_resource type="Script" uid="uid://1l5kppuba4ka" path="res://Balloon Popper/BalloonManager.gd" id="1_8r3wg"]
-[ext_resource type="Script" uid="uid://drgr25xkypaod" path="res://Balloon Popper/Balloon.gd" id="1_dhm31"]
-[ext_resource type="Material" uid="uid://nwydo320td0p" path="res://Balloon Popper/Materials/BalloonMaterial.tres" id="1_k7oat"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_nsdnv"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_k7oat"]
+[ext_resource type="PackedScene" uid="uid://c4jmgc2vn112j" path="res://Balloon Popper/Balloon.tscn" id="2_dhm31"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_8r3wg")
 
-[node name="Balloon" type="Area3D" parent="."]
-script = ExtResource("1_dhm31")
+[node name="Balloon" parent="." instance=ExtResource("2_dhm31")]
 
-[node name="Model" type="MeshInstance3D" parent="Balloon"]
-material_override = ExtResource("1_k7oat")
-mesh = SubResource("SphereMesh_nsdnv")
+[node name="Balloon2" parent="." instance=ExtResource("2_dhm31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5129, 0.905357, -0.125288)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Balloon"]
-shape = SubResource("SphereShape3D_k7oat")
+[node name="Balloon3" parent="." instance=ExtResource("2_dhm31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81364, 1.18344, -0.545305)
+
+[node name="Balloon4" parent="." instance=ExtResource("2_dhm31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18759, -0.239887, -0.0171146)
+
+[node name="Balloon5" parent="." instance=ExtResource("2_dhm31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.279312, 1.44842, -0.295215)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.980088, 0.198564, 0, -0.198564, 0.980088, 0, 0.759205, 3)
@@ -27,5 +26,3 @@ current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.7478, -0.268336, 0.607281, -0.353432, 0.613417, 0.706262, -0.562032, -0.742776, 0.363874, 0, 2.54906, 0)
-
-[connection signal="input_event" from="Balloon" to="Balloon" method="_on_input_event"]
