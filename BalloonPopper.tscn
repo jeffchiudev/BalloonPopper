@@ -10,15 +10,19 @@ script = ExtResource("1_8r3wg")
 
 [node name="Balloon2" parent="." instance=ExtResource("2_dhm31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5129, 0.905357, -0.125288)
+clicks_to_pop = 6
 
 [node name="Balloon3" parent="." instance=ExtResource("2_dhm31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81364, 1.18344, -0.545305)
+clicks_to_pop = 2
 
 [node name="Balloon4" parent="." instance=ExtResource("2_dhm31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18759, -0.239887, -0.0171146)
+clicks_to_pop = 4
 
 [node name="Balloon5" parent="." instance=ExtResource("2_dhm31")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.279312, 1.44842, -0.295215)
+clicks_to_pop = 7
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.980088, 0.198564, 0, -0.198564, 0.980088, 0, 0.759205, 3)
